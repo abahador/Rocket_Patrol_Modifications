@@ -4,16 +4,16 @@ class Menu extends Phaser.Scene {
     }
     preload() {
       // load audio
-      this.load.audio('sfx_select', './assets/blip_select12.wav');
-      this.load.audio('sfx_explosion', './assets/explosion38.wav');
-      this.load.audio('sfx_rocket', './assets/rocket_shot.wav');
+      this.load.audio('sfx_select', './assets/Squeak.wav');
+      this.load.audio('sfx_explosion', './assets/Catmeow.wav');
+      this.load.audio('sfx_rocket', './assets/Ratsqueak.wav');
     }
     create() {
       let menuConfig = {
-        fontFamily: 'Courier',
+        fontFamily: 'Comic Sans',
         fontSize: '28px',
-        backgroundColor: '#F3B141',
-        color: '#843605',
+        backgroundColor: '#E5618D',
+        color: '#5F046C',
         align: 'right',
         padding: {
         top: 5,
@@ -23,10 +23,10 @@ class Menu extends Phaser.Scene {
     }
     // show menu text
     this.add.text(game.config.width/2, game.config.height/2 - borderUISize -
-    borderPadding, 'ROCKET PATROL', menuConfig).setOrigin(0.5);
+    borderPadding, 'CAT PATROL', menuConfig).setOrigin(0.5);
     this.add.text(game.config.width/2, game.config.height/2, 'Use ←→ to move & (F) to fire', menuConfig).setOrigin(0.5);
-    menuConfig.backgroundColor = '#00ff00';
-    menuConfig.color = '#000';
+    menuConfig.backgroundColor = '#6FB8D5';
+    menuConfig.color = '#0C516D';
     this.add.text(game.config.width/2, game.config.height/2 + borderUISize +
     borderPadding, 'Press ← for Novice or → for Expert', menuConfig).setOrigin(0.5);
     // define keys
