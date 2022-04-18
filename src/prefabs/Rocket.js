@@ -25,7 +25,7 @@ class Rocket extends Phaser.GameObjects.Sprite {
                 this.x += this.horizMoveSpeed;
             }
         }
-        // fire button
+        // fire button for player 1 and 2
         //if (Phaser.Input.Keyboard.JustDown(keyF) && !this.isFiring) {
         console.log(this.keyFre);
         
