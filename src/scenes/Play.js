@@ -7,6 +7,7 @@ class Play extends Phaser.Scene {
         this.load.image('rocket', './assets/Ratrocket.png');
         this.load.image('spaceship', './assets/Catship.png');
         this.load.image('starfield', './assets/Bluesky.png');
+        this.load.image('starfield2', './assets/BlueDots.png');
         // load spritesheet
         this.load.spritesheet('explosion', './assets/Boom.png', {frameWidth: 64, frameHeight: 32, startFrame: 0, endFrame: 9});
       }
@@ -14,6 +15,7 @@ class Play extends Phaser.Scene {
     create() {
         // place tile sprite
         this.starfield = this.add.tileSprite(0, 0, 640, 480, 'starfield').setOrigin(0, 0);
+        this.starfield2 = this.add.tileSprite(0, 0, 640, 480, 'starfield2').setOrigin(0, 0);
       // green UI background
         this.add.rectangle(0, borderUISize + borderPadding, game.config.width, borderUISize * 2, 0xFE3377).setOrigin(0, 0);
         // white borders
@@ -88,6 +90,8 @@ class Play extends Phaser.Scene {
         this.ship02.update();
         this.ship03.update();
     
+        this.starfield.tilePositionX-=2;
+        this.starfield2.tilePositionX-=4;
     // check collisions
   if(this.checkCollision(this.p1Rocket, this.ship03)) {
     this.p1Rocket.reset();

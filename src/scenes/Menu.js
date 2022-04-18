@@ -22,12 +22,12 @@ class Menu extends Phaser.Scene {
         fixedWidth: 0
     }
     // show menu text
-    this.add.text(game.config.width/2, game.config.height/2 - borderUISize -
+    this.add.text(game.config.width/2, game.config.height/2 - 20 - borderUISize -
     borderPadding, 'CAT PATROL', menuConfig).setOrigin(0.5);
-    this.add.text(game.config.width/2, game.config.height/2, 'Use ←→ to move & (F) to fire', menuConfig).setOrigin(0.5);
+    this.add.text(game.config.width/2, game.config.height/2, 'P1 Use ←→ to move & (F) to fire\nP2 Use A/S to move & (R) to fire', menuConfig).setOrigin(0.5);
     menuConfig.backgroundColor = '#6FB8D5';
     menuConfig.color = '#0C516D';
-    this.add.text(game.config.width/2, game.config.height/2 + borderUISize +
+    this.add.text(game.config.width/2, game.config.height/2 + 20 + borderUISize +
     borderPadding, 'Press ← for Novice or → for Expert', menuConfig).setOrigin(0.5);
     // define keys
     keyLEFT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT);
